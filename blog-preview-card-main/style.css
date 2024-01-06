@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Figtree-Italic';
+    src: url(assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+:root{
+    --amarillo: hsl(47, 88%, 63%);
+    --blanco: #fafafa;
+    --gris: hsl(0, 0%, 50%);
+    --negro: hsl(0, 0%, 7%);
+}
+
+body{
+    font-family: 'Figtree-Italic';
+    background-color: var(--amarillo);
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 350px;
+    height: 470px;
+    padding: 1em;
+    padding-bottom: 0   ;
+    background-color: var(--blanco);
+    border-radius: 24px;
+    border: solid 1px var(--negro);
+    box-shadow: 5px 5px var(--negro);
+}
+
+.learn-img{
+    width: 100%;
+    align-self: center;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+span{
+    display: block;
+    margin-bottom: 1em;
+    background-color: var(--amarillo);
+    padding: 6px;
+    width: 90px;
+    font-weight: 800;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--negro);
+}
+
+.date{
+    font-size: 12px;
+    color: var(--negro);
+    font-weight: 400;
+    margin-bottom: 1em;
+}
+h2{
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--negro);
+    margin-bottom: 1em;
+
+    &:hover{
+        color: var(--amarillo);
+        cursor: pointer;
+    }
+}
+.text{
+    margin-bottom: 1em;
+    width: 100%;
+    color: var(--gris);
+
+}
+.avatar{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.avatar-img{
+    height: 2em;
+    width: 2em;
+}
+
+
+@media (max-width: 375px) {
+
+    section{
+        max-width: 270px;
+        height: 400px;
+    }
+    img{
+        height: 40%;
+        object-fit: cover;
+    }
+    h2{
+        font-size: 18px;
+    }
+    span{
+        font-size: 14px;
+        padding: 5px;
+    }
+    .text{
+        font-size: 12px;
+    }
+    h3{
+        font-size: 14px;
+    }
+}
